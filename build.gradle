@@ -1,0 +1,4 @@
+def mexcKey = project.hasProperty('MEXC_API_KEY') ? project.property('MEXC_API_KEY') : ""
+def mexcSecret = project.hasProperty('MEXC_API_SECRET') ? project.property('MEXC_API_SECRET') : ""
+buildConfigField "String", "MEXC_API_KEY", "\"${mexcKey}\""
+buildConfigField "String", "MEXC_API_SECRET", "\"${mexcSecret}\""
